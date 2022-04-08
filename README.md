@@ -1,4 +1,23 @@
-# Wordle Clone
+# Getting started with ClojureScript, TypeScript and TailwindCSS
+
+In this video you will learn how to build SPA using TypeScript, ClojureScript, tailwindcss and headless
+
+So here is the strategy
+
+1. we will use typescript to write all of our custom javascript interop logic such as react components that uses headless ui + tailwind ui
+2. we will use clojurescript to write only the core business logic
+
+This strategy has many benefits
+- JavaScript interop code can evolve independently from core business logic
+- Clear separation from interop code and business logic code
+- ClojureScript code becomes smaller since it is only using interfaces
+
+
+Steps:
+
+## 1. Create a new shadow-cljs project
+## 2. Configure typescript
+## 3. Configure tailwind
 
 - Go play the real Wordle [here](https://www.powerlanguage.co.uk/wordle/)
 - Read the story behind it [here](https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html)
@@ -24,16 +43,9 @@ _To Run Locally:_
 Clone the repository and perform the following command line actions:
 ```bash
 $ cd wordle
-$ npm install
-$ npm run start
+$ yarn
+$ yarn dev
 ```
 
-_To build/run docker container:_
-```bash
-$ docker build -t notwordle .
-$ docker run -d -p 3000:3000 notwordle
-```
+
 open http://localhost:3000 in browser.
-
-### I'm looking for a junior developer role
-Please feel free to contact me on [linkedin](https://www.linkedin.com/in/hannahpark1000/) and learn more about me [here](https://www.hannahmariepark.com/)
