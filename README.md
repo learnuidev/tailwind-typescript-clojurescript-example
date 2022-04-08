@@ -34,7 +34,8 @@ Steps:
 _To Run Locally:_
 Clone the repository and perform the following command line actions:
 ```bash
-$ cd wordle
+$ git clone https://github.com/learnuidev/tailwind-typescript-clojurescript-example.git
+$ cd tailwind-typescript-clojurescript-example
 $ yarn
 $ yarn dev
 ```
