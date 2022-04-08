@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "components": "npx babel ./src/js/components/ --extensions .ts,.tsx --out-dir ./src/gen/components/",
+    "components": "npx babel ./src/js/ --extensions .ts,.tsx --out-dir ./src/gen/",
     "components:watch": "yarn components --watch",
     "dev": "yarn components && concurrently \"yarn components:watch\" \"yarn start\"",
     "sc": "shadow-cljs",

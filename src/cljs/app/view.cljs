@@ -1,7 +1,22 @@
 (ns app.view
   (:require [reagent.core :as r]
-            ["/components/ui/Button" :refer [Button]]
-            ["/components/ui/Alert" :refer [Alert]]))
+            ["/components/Button" :refer [Button]]
+            ["/components/Alert" :refer [Alert]]
+            ["/hooks/react" :refer [useCallback useState]]))
+
+(js/console.log useState)
+
+(defn hooks-counter []
+  (let [[count set-count] (useState 0)
+        set-counter (useCallback
+                     (fn [] (set-count (inc count)))
+                     (clj->js [count]))]
+    [:div
+     [:div (str "Counter: " count)]
+     [:button
+      {:on-click set-counter}
+      "Inc"]]))
+
 
 (defn click-counter [click-count]
   [:div
@@ -19,4 +34,5 @@
    [:> Alert {:message "You lost, the word was"
               :isOpen true}]
    [:> Button {:title "Hello TSX"}]
+   [:f> hooks-counter]
    [click-counter click-count]])
